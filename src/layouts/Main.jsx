@@ -5,6 +5,7 @@ import { customTheme } from "../helpers/utils";
 import VelanixIcon from "../assets/velanix.png";
 import PropTypes from "prop-types";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 const Main = ({ children }) => {
   return (
@@ -15,10 +16,10 @@ const Main = ({ children }) => {
       }}
     >
       <aside className="overflow-hidden rounded-lg bg-white p-3 shadow max-md:hidden">
-        <div className="flex items-center justify-center gap-3 pt-4">
+        <Link to="/" className="flex items-center justify-center gap-3 pt-4">
           <img src={VelanixIcon} alt="Velanix Icon" />
           <h3 className="text-2xl font-semibold text-slate-500">Velanix</h3>
-        </div>
+        </Link>
         <Divider />
         <Sidebar />
       </aside>

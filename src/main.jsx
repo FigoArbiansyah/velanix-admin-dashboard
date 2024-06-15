@@ -5,12 +5,17 @@ import routes from "./routes/admin.js";
 import "./styles/Main.css";
 import Main from "./layouts/Main.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import OnDevelop from "./pages/OnDevelop.jsx";
 
 const router = createBrowserRouter(
   [
     {
       path: "*",
       element: <NotFound />,
+    },
+    {
+      path: "/",
+      element: <OnDevelop />,
     },
   ]?.concat(
     routes?.map((route) => {
